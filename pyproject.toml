@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-kid-friendly-dialog-transformer"
+description = "Dialog transformer for OVOS, designed to return kid-friendly responses from Ollama"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Mike Gray/Oscillate Labs", email = "mike@oscillatelabs.net" },
+]
+keywords = ["mycroft", "ovos", "neon", "plugin", "tts"]
+dynamic = ["version"]
+dependencies = [
+    "ovos-plugin-manager>=0.8.3",
+    "ovos-utils>=0.7.0",
+    "requests>=2.32.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/OscillateLabsLLC/ovos-kid-friendly-dialog-transformer"
+
+[project.entry-points."opm.transformer.dialog"]
+ovos-kid-friendly-dialog-transformer = "ovos_kid_friendly_dialog_transformer:KidFriendlyDialogTransformer"
+
+[tool.setuptools.dynamic]
+version = { attr = "ovos_kid_friendly_dialog_transformer.version.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["ovos_kid_friendly_dialog_transformer*"]
+
+[dependency-groups]
+dev = ["pytest>=8.3.4", "pytest-cov>=6.0.0"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --cov=ovos_kid_friendly_dialog_transformer --cov-report=term-missing"
+testpaths = ["test"]
+
+[tool.ruff]
+line-length = 119
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle
+    "F", # pyflakes
+    "I", # isort
+]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+combine-as-imports = true
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
