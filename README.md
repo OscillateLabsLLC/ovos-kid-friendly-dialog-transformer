@@ -1,5 +1,7 @@
 # ovos-kid-friendly-dialog-transformer
 
+[![Status: Proof of Concept](https://img.shields.io/badge/status-proof%20of%20concept-orange)](https://github.com/OscillateLabsLLC/.github/blob/main/SUPPORT_STATUS.md)
+
 Dialog transformer for OVOS, designed to return kid-friendly responses from Ollama.
 
 The default model to use is llama3.2, which is a 3B parameter model and has a difficult time following instructions. You will probably need to adjust your prompt for best results.
