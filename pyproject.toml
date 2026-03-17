@@ -36,7 +36,7 @@ dev = ["pytest>=8.3.4", "pytest-cov>=6.0.0"]
 [tool.pytest.ini_options]
 minversion = "7.0"
 addopts = "-ra -q --cov=ovos_kid_friendly_dialog_transformer --cov-report=term-missing"
-testpaths = ["test"]
+testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 119
