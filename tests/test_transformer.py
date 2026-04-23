@@ -64,7 +64,7 @@ def test_context_prompt_override(transformer):
         context = {"prompt": "Custom prompt override"}
         dialog, new_context = transformer.transform("test", context)
 
-        assert mock_post.call_args[1]["json"]["prompt"] == "Custom prompt override"
+        assert mock_post.call_args[1]["json"]["prompt"] == "Custom prompt override\n\n test"
         assert new_context == context
 
 
