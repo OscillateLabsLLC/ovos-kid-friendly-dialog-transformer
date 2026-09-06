@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "ovos-kid-friendly-dialog-transformer"
 description = "Dialog transformer for OVOS, designed to return kid-friendly responses from Ollama"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 authors = [
     { name = "Mike Gray/Oscillate Labs", email = "mike@oscillatelabs.net" },
 ]
@@ -23,6 +23,10 @@ Homepage = "https://github.com/OscillateLabsLLC/ovos-kid-friendly-dialog-transfo
 
 [project.entry-points."opm.transformer.dialog"]
 ovos-kid-friendly-dialog-transformer = "ovos_kid_friendly_dialog_transformer:KidFriendlyDialogTransformer"
+
+[tool.uv]
+# ovos-plugin-manager imports pkg_resources, which setuptools removes in 82.
+constraint-dependencies = ["setuptools<82"]
 
 [tool.setuptools.dynamic]
 version = { attr = "ovos_kid_friendly_dialog_transformer.version.__version__" }
