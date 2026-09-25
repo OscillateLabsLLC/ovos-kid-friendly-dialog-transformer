@@ -1,0 +1,14 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "python",
+      "package-name": "ovos-kid-friendly-dialog-transformer",
+      "extra-files": [
+        {
+          "type": "generic",
+          "path": "ovos_kid_friendly_dialog_transformer/version.py"
+        }
+      ]
+    }
+  }
+}
