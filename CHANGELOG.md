@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/OscillateLabsLLC/ovos-kid-friendly-dialog-transformer/compare/ovos-kid-friendly-dialog-transformer-v1.1.0...ovos-kid-friendly-dialog-transformer-v1.1.1) (2026-11-04)
+
+
+### Bug Fixes
+
+* **deps:** bump certifi, urllib3 ([126ea2f](https://github.com/OscillateLabsLLC/ovos-kid-friendly-dialog-transformer/commit/126ea2fff86e5f1f641f55d8613b3a0093a76590))
+* **deps:** bump certifi, urllib3 ([038c23d](https://github.com/OscillateLabsLLC/ovos-kid-friendly-dialog-transformer/commit/038c23d3c101b5209fcd2155c8df1890e5da812e))
+
 ## [1.1.0](https://github.com/OscillateLabsLLC/ovos-kid-friendly-dialog-transformer/compare/ovos-kid-friendly-dialog-transformer-v1.0.0...ovos-kid-friendly-dialog-transformer-v1.1.0) (2026-09-25)
 
 
